@@ -120,3 +120,8 @@ extension String {
     }
 }
 
+extension Notification.Name{
+    static let itemSaveNotification = Notification.Name("itemSaveNotification")
+}
+
+

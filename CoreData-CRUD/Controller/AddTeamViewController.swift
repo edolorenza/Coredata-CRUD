@@ -137,7 +137,6 @@ class AddTeamViewController: UIViewController {
             
             // save to coreData
             do {
-                print("success")
                 try context.save()
             }
             catch{
@@ -176,17 +175,17 @@ class AddTeamViewController: UIViewController {
             
             // save to coreData
             do {
-                print("success")
                 try context.save()
             }
             catch{
                 print(error.localizedDescription)
             }
             
-            self.navigationController?.popViewController(animated: true)
+            
             
         }
-        
+        self.navigationController?.popViewController(animated: true)
+        NotificationCenter.default.post(name: .itemSaveNotification, object: nil)
     }
     
     @objc func handleChooseImageButton() {
@@ -220,7 +219,6 @@ class AddTeamViewController: UIViewController {
     private func coreData() {
         if avengerID != 0 {
             let avengerFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Avengers")
-            print(avengerFetch)
             avengerFetch.fetchLimit = 1
             // condition with predicate
             avengerFetch.predicate = NSPredicate(format: "id == \(avengerID)")

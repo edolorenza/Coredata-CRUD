@@ -19,6 +19,7 @@
 		6BC4833D2682F8DD0002535D /* AddTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4833C2682F8DD0002535D /* AddTeamViewController.swift */; };
 		6BC4833F2682FAA90002535D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4833E2682FAA90002535D /* CustomTextField.swift */; };
 		6BC4834226831A7C0002535D /* MainViewTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4834126831A7C0002535D /* MainViewTableViewCellViewModel.swift */; };
+		6BC48344268328E80002535D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC48343268328E80002535D /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		6BC4833C2682F8DD0002535D /* AddTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTeamViewController.swift; sourceTree = "<group>"; };
 		6BC4833E2682FAA90002535D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		6BC4834126831A7C0002535D /* MainViewTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		6BC48343268328E80002535D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				6B01021B2682EB39007694C1 /* MainViewController.swift */,
 				6BC4833C2682F8DD0002535D /* AddTeamViewController.swift */,
+				6BC48343268328E80002535D /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC48344268328E80002535D /* DetailViewController.swift in Sources */,
 				6BC4834226831A7C0002535D /* MainViewTableViewCellViewModel.swift in Sources */,
 				6B0102302682EF3C007694C1 /* NoDataLabelView.swift in Sources */,
 				6B01021C2682EB39007694C1 /* MainViewController.swift in Sources */,

@@ -1,10 +1,10 @@
 # CoreData CRUD
 
 ## Objective
-- [ ] Showing data
-- [ ] Add data (image, label, date)
-- [ ] Update & Delete Data
-- [ ] Search Data
+- [x] Showing data
+- [x] Add data (image, label, date)
+- [x] Update & Delete Data
+- [x] Search Data
 
 ## Third party list
 

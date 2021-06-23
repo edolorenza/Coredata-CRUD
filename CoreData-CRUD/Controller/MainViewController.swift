@@ -28,6 +28,7 @@ class MainViewController: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    private var observer: NSObjectProtocol?
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -52,6 +53,11 @@ class MainViewController: UIViewController {
         
         view.addSubview(tableView)
         tableView.frame = view.bounds
+        
+        observer = NotificationCenter.default.addObserver(forName: .itemSaveNotification, object: nil, queue: .main, using: { [weak self] _ in
+            self?.updateUI()
+        })
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -69,10 +75,9 @@ class MainViewController: UIViewController {
         } catch  {
             print(error.localizedDescription)
         }
-        
         self.updateUI()
     }
-
+    
     //MARK: - Actions
     @objc func didTapAddData() {
         let vc = AddTeamViewController()
@@ -97,9 +102,15 @@ class MainViewController: UIViewController {
     
     private func updateUI(){
         if avengers.isEmpty {
+            tableView.reloadData()
+            searchController.searchBar.isHidden = true
             noDataList.isHidden = false
+            tableView.isHidden = true
+            
         }else {
             tableView.reloadData()
+            searchController.searchBar.isHidden = false
+            noDataList.isHidden = true
             tableView.isHidden = false
         }
     }
@@ -109,13 +120,21 @@ class MainViewController: UIViewController {
 //MARK: - NoDataLabelViewDelegate
 extension MainViewController: NoDataLabelViewDelegate {
     func noDataLabelViewDidTapButton(_ actionView: NoDataLabelView) {
-        print("DEBUG: add data button tapped")
+        let vc = AddTeamViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 //MARK: - UITableViewDelegate
 extension MainViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let avenger = avengers[indexPath.row]
+        let vc = DetailViewController()
+        vc.viewModel = MainViewTableViewCellViewModel(avengers: avenger)
+        vc.avengerID = Int(avenger.id)
+        vc.navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 //MARK: - UITableViewDataSource
@@ -128,12 +147,11 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var avenger = avengers[indexPath.row]
-            
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MainViewTableViewCell.identifier, for: indexPath) as? MainViewTableViewCell else {
             return UITableViewCell()
         }
         
+        var avenger = avengers[indexPath.row]
         if searchController.isActive && !((searchController.searchBar.text?.isEmpty)!) {
              avenger = filteredAvengers[indexPath.row]
         }else{

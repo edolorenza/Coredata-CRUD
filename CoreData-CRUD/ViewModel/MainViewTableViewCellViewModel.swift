@@ -24,11 +24,27 @@ struct MainViewTableViewCellViewModel {
     
     var name: String {
         guard let firstName = avengers.firstName else { return "" }
-        guard let lastName = avengers.lastName else { return " "}
-        return firstName + lastName
+        guard let lastName = avengers.lastName else { return ""}
+        return firstName +  " \(lastName)"
+    }
+    
+    var firstName: String? {
+        return avengers.firstName
+    }
+    
+    var lastName: String? {
+        return avengers.lastName
     }
     
     var date: String? {
         return avengers.birthDate
+    }
+    
+    var email: String? {
+        return avengers.email
+    }
+    
+    var id: Int32 {
+        return avengers.id
     }
 }
