@@ -15,6 +15,9 @@
 		6B0102272682EB3E007694C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B0102252682EB3E007694C1 /* LaunchScreen.storyboard */; };
 		6B0102302682EF3C007694C1 /* NoDataLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B01022F2682EF3C007694C1 /* NoDataLabelView.swift */; };
 		6B0102332682EF8A007694C1 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0102322682EF8A007694C1 /* extension.swift */; };
+		6BC4833A2682F6AE0002535D /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC483392682F6AE0002535D /* MainViewTableViewCell.swift */; };
+		6BC4833D2682F8DD0002535D /* AddTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4833C2682F8DD0002535D /* AddTeamViewController.swift */; };
+		6BC4833F2682FAA90002535D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4833E2682FAA90002535D /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		6B0102282682EB3E007694C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B01022F2682EF3C007694C1 /* NoDataLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataLabelView.swift; sourceTree = "<group>"; };
 		6B0102322682EF8A007694C1 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		6BC483392682F6AE0002535D /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
+		6BC4833C2682F8DD0002535D /* AddTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTeamViewController.swift; sourceTree = "<group>"; };
+		6BC4833E2682FAA90002535D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +70,7 @@
 				6B0102312682EF78007694C1 /* Utils */,
 				6B0102172682EB39007694C1 /* AppDelegate.swift */,
 				6B0102192682EB39007694C1 /* SceneDelegate.swift */,
-				6B01021B2682EB39007694C1 /* MainViewController.swift */,
+				6BC4833B2682F85D0002535D /* Controller */,
 				6B0102232682EB3E007694C1 /* Assets.xcassets */,
 				6B0102252682EB3E007694C1 /* LaunchScreen.storyboard */,
 				6B0102282682EB3E007694C1 /* Info.plist */,
@@ -77,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				6B01022F2682EF3C007694C1 /* NoDataLabelView.swift */,
+				6BC483392682F6AE0002535D /* MainViewTableViewCell.swift */,
+				6BC4833E2682FAA90002535D /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -87,6 +95,15 @@
 				6B0102322682EF8A007694C1 /* extension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		6BC4833B2682F85D0002535D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6B01021B2682EB39007694C1 /* MainViewController.swift */,
+				6BC4833C2682F8DD0002535D /* AddTeamViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +179,11 @@
 				6B01021C2682EB39007694C1 /* MainViewController.swift in Sources */,
 				6B0102182682EB39007694C1 /* AppDelegate.swift in Sources */,
 				6B0102332682EF8A007694C1 /* extension.swift in Sources */,
+				6BC4833A2682F6AE0002535D /* MainViewTableViewCell.swift in Sources */,
+				6BC4833D2682F8DD0002535D /* AddTeamViewController.swift in Sources */,
 				6B0102222682EB39007694C1 /* CoreData_CRUD.xcdatamodeld in Sources */,
 				6B01021A2682EB39007694C1 /* SceneDelegate.swift in Sources */,
+				6BC4833F2682FAA90002535D /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

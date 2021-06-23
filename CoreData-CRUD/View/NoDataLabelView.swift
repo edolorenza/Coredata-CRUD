@@ -40,7 +40,7 @@ class NoDataLabelView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         clipsToBounds = true
-        isHidden = false
+        isHidden = true
     }
     
     required init?(coder: NSCoder) {
